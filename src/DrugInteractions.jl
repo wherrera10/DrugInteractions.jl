@@ -31,14 +31,16 @@ function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Res
         if !isempty(drugs)
             tuples = length(drugs) == 1 ? interaction(first(drugs); ONCHigh = high) :
                                           interaction_within_list(string.(drugs))
-            lines = "Substance 1     Substance 2    Severity    Description\n" * "-"^160 * "\n"
-            for t in tuples
-                line = rpad(t[1], 20) * " " * rpad(t[2], 20) * " " * rpad(t[3], 8) * " " * t[4]
-                lines *= line * "\n"
+            if !isempty(tuples)
+                lines = "Substance 1     Substance 2    Severity    Description\n" * "-"^160 * "\n"
+                for t in tuples
+                    line = rpad(t[1], 20) * " " * rpad(t[2], 20) * " " * rpad(t[3], 8) * " " * t[4]
+                    lines *= line * "\n"
+                end
+                info_dialog(lines)
+            else
+                info_dialog("No results found")
             end
-            info_dialog(lines)
-        else
-            info_dialog("No results found")
         end
     end
 
