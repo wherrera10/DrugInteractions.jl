@@ -16,8 +16,9 @@ Finding drug interactions from the RxNav online internet database with Gtk in Ju
 
 ## Functions
 
-    drug_interactions_app()
+####    drug_interactions_app()
 
+Start the app.
 
 <br /><br />
   
