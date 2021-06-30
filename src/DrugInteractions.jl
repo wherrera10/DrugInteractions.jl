@@ -22,6 +22,7 @@ function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Res
     set_gtk_property!(highonly, :active, true)
     resultbutton = GtkButton(rlabel)
     win = GtkWindow(title, 300, 100) |> (GtkFrame() |> (vbox = GtkButtonBox(:v)))
+    push!(_apps, win)
     push!(vbox, topbox, highonly, resultbutton)
     set_gtk_property!(substances, :expand, true)
 
