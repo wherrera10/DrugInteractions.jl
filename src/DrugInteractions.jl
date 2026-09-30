@@ -85,8 +85,3 @@ end
 
 end # module
 
-
-if PROGRAM_FILE == abspath(PROGRAM_FILE)
-    using .DrugInteractions
-    drug_interactions_app()
-end
