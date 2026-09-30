@@ -29,14 +29,14 @@ You may install the package from Github in the usual way:
 
     # press ] to go to Pkg mode
   
-    pkg> add DoseCalculators
+    pkg> add DrugInteractions
       
  <br />
   
  Or, to install the current master copy:
     
     using Pkg
-    Pkg.add("http://github.com/wherrera10/DoseCalculators.jl")                          
+    Pkg.add("https://github.com/wherrera10/DoseCalculators.jl")                          
   
  <br /> 
  
