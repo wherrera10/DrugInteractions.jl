@@ -15,7 +15,7 @@ Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 [compat]
 julia = "1.10"
 Gtk4 = "0.7"
-RxNav = "0.1, 0.2"
+RxNav = "0.1.2"
 
 [targets]
 test = ["Pkg", "Test"]
