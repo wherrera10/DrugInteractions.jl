@@ -10,7 +10,7 @@ export drug_interactions_app
 using Gtk4
 using RxNav
 
-function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Results")
+function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Results"; stay_open = true)
     label = GtkLabel("Drug(s) to Check:  ")
     substances = GtkEntry()
     substances.hexpand = true
@@ -74,6 +74,14 @@ function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Res
     !isinteractive() && @async Gtk4.GLib.start_main_loop()
 
     condition = Condition()
+
+    if !stay_open
+        @async begin
+            sleep(5)
+            notify(condition)
+        end
+    end
+    
     signal_connect(win, "close-request") do _
         notify(condition)
         false
