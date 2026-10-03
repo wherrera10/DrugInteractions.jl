@@ -80,6 +80,7 @@ function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Res
         @async begin
             sleep(5)
             notify(condition)
+            close(win)
         end
     end
     
