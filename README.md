@@ -4,7 +4,8 @@
 
 [![Build Status](https://github.com/wherrera10/DrugInteractions.jl/workflows/CI/badge.svg)](https://github.com/wherrera10/DrugInteractions.jl/actions)
 
-Finding drug interactions from the RxNav online internet database with Gtk in Julia
+Finding drug interactions from the National Library of Medicine's RxNav online 
+internet database within a GTK 4 GUI window.
 
 <br /><br />
 
