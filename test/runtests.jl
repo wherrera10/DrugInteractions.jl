@@ -1,4 +1,4 @@
-using Test
+using Test, Gtk4
 using DrugInteractions
      
 win = drug_interactions_app(; stay_open = false)
