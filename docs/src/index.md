@@ -2,7 +2,7 @@
 
 <img src="https://github.com/wherrera10/DrugInteractions.jl/blob/main/docs/src/bottles-from-nih-twitter.png">
 
-Finding drug interactions from the RxNav online internet database with Gtk in Julia
+Finding drug interactions from the RxNav online internet database with GTK 4 in Julia
 
 <br /><br />
 
