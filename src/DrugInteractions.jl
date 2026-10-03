@@ -71,11 +71,9 @@ function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Res
     end
 
     signal_connect(queryRxNav, resultbutton, "clicked")
-
     !isinteractive() && @async Gtk4.GLib.start_main_loop()
-
+    show(win)
     condition = Condition()
-
     if !stay_open
         @async begin
             sleep(5)
@@ -83,13 +81,12 @@ function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Res
             close(win)
         end
     end
-    
     signal_connect(win, "close-request") do _
         notify(condition)
         false
     end
-    show(win)
     wait(condition)
+    return win
 end
 
 end # module DrugInteractions
