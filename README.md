@@ -2,6 +2,8 @@
 
 <img src="https://github.com/wherrera10/DrugInteractions.jl/blob/main/docs/src/bottles-from-nih-twitter.png">
 
+[![Build Status](https://github.com/wherrera10/DrugInteractions.jl/workflows/CI/badge.svg)](https://github.com/wherrera10/DrugInteractions.jl/actions)
+
 Finding drug interactions from the RxNav online internet database with Gtk in Julia
 
 <br /><br />
