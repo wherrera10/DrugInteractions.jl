@@ -1,6 +1,6 @@
 using Test
 using DrugInteractions
      
-@async drug_interactions_app()
+win = drug_interactions_app(; stay_open = false)
 
-@test true
+@test win isa GtkWindow
