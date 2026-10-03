@@ -10,6 +10,7 @@ export drug_interactions_app
 using Gtk4
 using RxNav
 
+""" The Gtk4 app. Titles of app windows are `title` and 'rlabel`, and the stay_open argument is for testing """
 function drug_interactions_app(title = "Drug Interaction Queries", rlabel = "Results"; stay_open = true)
     label = GtkLabel("Drug(s) to Check:  ")
     substances = GtkEntry()
